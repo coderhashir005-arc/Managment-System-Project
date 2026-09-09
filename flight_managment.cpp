@@ -8,11 +8,13 @@ class flights
     // string fff;
 
 public:
-    // void new_in();
     // void chk_flights();
     void flight_in();
+    /*
+    this funciton is coming soon.
+    void seats_available();
+    */
     void all_flights()
-    // void seats_available();
     {
         cout << "These Flights are available." << endl;
         cout << "1. Lahore to Islamabad." << endl;
@@ -57,63 +59,52 @@ void flights::flight_in()
     }
 }
 
-// void flights ::seats_available()
-// {
-// }
 
-// void flights::new_in()
-// {
-//     cin >> fff;
-// }
+/* void flights ::chk_flights()
+{
+    for (int i = 0; i < fff.length(); i++)
+    {
+        if (fff.at(i) == 1)
+        {
+            cout << "Domestic flight from Pakistan International Airport" << endl;
+            cout << "Total seats are: 60" << endl;
+        }
 
-// void flights ::chk_flights()
-// {
-//     for (int i = 0; i < fff.length(); i++)
-//     {
-//         if (fff.at(i) == 1)
-//         {
-//             /* code */
-//             cout << "Domestic flight from Pakistan International Airport" << endl;
-//             cout << "Total seats are: 60" << endl;
-//         }
+        else if (fff.at(i) == 2)
+        {
+            cout << "International flight from Pakistan International Airport" << endl;
+            cout << "Total seats are: 210" << endl;
+        }
 
-//         else if (fff.at(i) == 2)
-//         {
-//             /* code */
-//             cout << "International flight from Pakistan International Airport" << endl;
-//             cout << "Total seats are: 210" << endl;
-//         }
+        else if (fff.at(i) == 3)
+        {
+            cout << "International flight from Pakistan International Airport" << endl;
+            cout << "Total seats are: 95" << endl;
+        }
 
-//         else if (fff.at(i) == 3)
-//         {
-//             /* code */
-//             cout << "International flight from Pakistan International Airport" << endl;
-//             cout << "Total seats are: 95" << endl;
-//         }
+        else if (fff.at(i) == 4)
+        {
+            cout << "International flight from Pakistan International Airport" << endl;
+            cout << "Total seats are: 110" << endl;
+        }
 
-//         else if (fff.at(i) == 4)
-//         {
-//             /* code */
-//             cout << "International flight from Pakistan International Airport" << endl;
-//             cout << "Total seats are: 110" << endl;
-//         }
+        else
+        {
+            cout << "International flight from Pakistan International Airport" << endl;
+            cout << "Total seats are: 30" << endl;
+        }
+    }
+}
+*/
 
-//         else
-//         {
-//             /* code */
-//             cout << "International flight from Pakistan International Airport" << endl;
-//             cout << "Total seats are: 30" << endl;
-//         }
-//     }
-// }
+
+
 
 int main()
 {
     flights hashir_air;
     hashir_air.all_flights();
     hashir_air.flight_in();
-    // hashir_air.new_in();
-    // hashir_air.chk_flights();
 
     return 0;
 }
