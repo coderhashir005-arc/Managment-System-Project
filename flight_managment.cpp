@@ -2,18 +2,19 @@
 #include <string>
 using namespace std;
 
+int seats_total[] = {60, 210, 95, 110, 30};
+int seats_booked[] = {14, 74, 53, 97, 23};
+int seats_available[] = {};
 class flights
 {
     int fff;
     // string fff;
 
 public:
-    // void chk_flights();
     void flight_in();
-    /*
-    this funciton is coming soon.
-    void seats_available();
-    */
+    void seats_booking();
+    void book();
+    void booking();
     void all_flights()
     {
         cout << "These Flights are available." << endl;
@@ -34,77 +35,104 @@ void flights::flight_in()
     {
     case (1):
         cout << "Domestic flight from Pakistan International Airport" << endl;
-        cout << "Total seats are 60" << endl;
+        cout << "Total seats are " << seats_total[0] << endl;
         break;
 
     case (2):
         cout << "International flight from Pakistan International Airport" << endl;
-        cout << "Total seats are 210" << endl;
+        cout << "Total seats are " << seats_total[1] << endl;
         break;
 
     case (3):
-        cout << "International flight from Pakistan International Airport" << endl;
-        cout << "Total seats are 95" << endl;
+        cout << "International flight from Moroco International Airport" << endl;
+        cout << "Total seats are " << seats_total[2] << endl;
         break;
 
     case (4):
-        cout << "International flight from Pakistan International Airport" << endl;
-        cout << "Total seats are 110" << endl;
+        cout << "International flight from Peru International Airport" << endl;
+        cout << "Total seats are " << seats_total[3] << endl;
+        break;
+
+    case (5):
+        cout << "International flight from Peru International Airport" << endl;
+        cout << "Total seats are " << seats_total[4] << endl;
         break;
 
     default:
-        cout << "International flight from Pakistan International Airport" << endl;
-        cout << "Total seats are 30" << endl;
+        cout << "Not Available" << endl;
+        break;
+    }
+}
+void flights::book()
+{
+    string reply;
+    cout << "Do you want to check the seats details." << endl;
+    // cout << "Yes or No" << endl;
+    cin >> reply;
+
+    if (reply == "Yes")
+    {
+        // cout << "" << endl;
+        seats_booking();
+    }
+    else
+    {
+        cout << "Thank you for visting the system" << endl;
+    }
+}
+
+void flights::seats_booking()
+{
+    cout << "Press the number of flight, if you want to book" << endl;
+    cin >> fff;
+    switch (fff)
+    {
+    case (1):
+        cout << "Available seats in this Airbus : " << seats_total[0] - seats_booked[0] << endl;
+        cout << "Enter how many seats you want to book" << endl;
+        cin >> seats_available[0];
+        break;
+
+    case (2):
+        cout << "Available seats in this Airbus : " << seats_total[1] - seats_booked[1] << endl;
+        cout << "Enter how many seats you want to book" << endl;
+        cin >> seats_available[1];
+        break;
+
+    case (3):
+        cout << "Available seats in this Airbus : " << seats_total[2] - seats_booked[2] << endl;
+        cout << "Enter how many seats you want to book" << endl;
+        cin >> seats_available[2];
+        break;
+
+    case (4):
+        cout << "Available seats in this Airbus : " << seats_total[3] - seats_booked[3] << endl;
+        cout << "Enter how many seats you want to book" << endl;
+        cin >> seats_available[3];
+        break;
+
+    case (5):
+        cout << "Available seats in this Airbus : " << seats_total[4] - seats_booked[4] << endl;
+        cout << "Enter how many seats you want to book" << endl;
+        cin >> seats_available[4];
+        break;
+    default:
+        cout << "Not Available" << endl;
         break;
     }
 }
 
+// void flights::booking(){
 
-/* void flights ::chk_flights()
-{
-    for (int i = 0; i < fff.length(); i++)
-    {
-        if (fff.at(i) == 1)
-        {
-            cout << "Domestic flight from Pakistan International Airport" << endl;
-            cout << "Total seats are: 60" << endl;
-        }
-
-        else if (fff.at(i) == 2)
-        {
-            cout << "International flight from Pakistan International Airport" << endl;
-            cout << "Total seats are: 210" << endl;
-        }
-
-        else if (fff.at(i) == 3)
-        {
-            cout << "International flight from Pakistan International Airport" << endl;
-            cout << "Total seats are: 95" << endl;
-        }
-
-        else if (fff.at(i) == 4)
-        {
-            cout << "International flight from Pakistan International Airport" << endl;
-            cout << "Total seats are: 110" << endl;
-        }
-
-        else
-        {
-            cout << "International flight from Pakistan International Airport" << endl;
-            cout << "Total seats are: 30" << endl;
-        }
-    }
-}
-*/
-
-
-
+// }
 
 int main()
 {
     flights hashir_air;
     hashir_air.all_flights();
     hashir_air.flight_in();
+    hashir_air.book();
+    // hashir_air.seats_available();
 
     return 0;
 }
