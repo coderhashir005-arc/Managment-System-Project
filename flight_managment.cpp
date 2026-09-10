@@ -72,7 +72,6 @@ void flights::book()
 
     if (reply == "Yes")
     {
-        // cout << "" << endl;
         seats_booking();
     }
     else
@@ -121,10 +120,6 @@ void flights::seats_booking()
         break;
     }
 }
-
-// void flights::booking(){
-
-// }
 
 int main()
 {
